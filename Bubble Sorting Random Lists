@@ -1,0 +1,29 @@
+import random
+import sys, os
+				## Provides a random list and bubble sorts it ##
+
+def res():
+	restart = input("\nWould you like to sort another list? [Y/N]\n")
+	if (restart == "Y") or (restart == "y"):
+		os.system("cls")
+		sortRandomList()
+
+	elif (restart == "N") or (restart == "n") or (restart ==""):
+		sys.exit()
+
+
+def sortRandomList():
+	coollist = random.sample(range(100), 10)
+	print("Original list:\n\t",coollist, "\nChangelog:")
+
+	for L in range(len(coollist)):
+	    for x in range(0, len(coollist)-1):
+	        if (coollist[x] > coollist[x+1]):
+	            temp = coollist[x]
+	            coollist[x] = coollist[x+1]
+	            coollist[x+1] = temp
+	    print("\t",coollist)
+	print("Sorted List:\n\t",coollist)
+	res()
+
+sortRandomList()
