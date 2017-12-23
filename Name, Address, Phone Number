@@ -1,0 +1,7 @@
+userName = input("What Is Your Name?")
+userAddress = input("What Is Your Address?")
+userPhone = input("What Is Your Phone Number?")
+
+print (userName+"\n"+userAddress+"\n"+userPhone)
+
+placeholder = input("")
